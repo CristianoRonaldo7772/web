@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBT ISAAC NEWTON ACTIVIDADES</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            background-color: #e0e0e0; /* Fondo gris actualizado */
+            color: #333;
+            line-height: 1.8; /* Aumentado para más espacio entre líneas de texto */
+        }
+        .titulo {
+            color: green;
+            text-align: center;
+            margin-bottom: 40px; /* Un poco más de espacio debajo del título principal */
+        }
+        .logo {
+            display: block;
+            margin: 20px auto 40px auto; /* Más espacio debajo del logo */
+            max-width: 100px;
+        }
+        .nav-buttons {
+            text-align: center;
+            margin-bottom: 50px; /* Más espacio debajo de los botones de navegación */
+        }
+        .nav-buttons button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 6px; /* Ajuste el margen horizontal para acomodar el nuevo botón */
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .nav-buttons button:hover {
+            background-color: #45a049;
+        }
+
+        /* Contenedores de secciones con espacio extra */
+        .section-container {
+            background-color: #ffffff;
+            padding: 35px 40px; /* Aumentado el padding interno de las secciones */
+            margin-bottom: 80px; /* ¡Más espacio significativo entre secciones! */
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Sombra un poco más pronunciada */
+        }
+
+        .section-container h2 {
+            margin-bottom: 25px; /* Más espacio debajo de los subtítulos de sección */
+        }
+
+        .parrafo-principal p, /* Seleccionamos directamente los párrafos dentro del section-container */
+        .parrafo-secundario,
+        .texto-rojo,
+        .section-container p { /* Añadido para que todos los párrafos de secciones tengan este margen */
+            margin-bottom: 25px; /* Más espacio debajo de cada párrafo */
+            text-align: center;
+        }
+        /* Reiniciar margen para el último párrafo si es necesario */
+        .section-container p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        .parrafo-secundario {
+            color: lightskyblue;
+        }
+        
+        .imagenes-actividades-festividades,
+        .imagenes-actividades-comunitarias,
+        .imagenes-carreras {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 30px; /* Más espacio encima del grupo de imágenes */
+            margin-bottom: 30px; /* Más espacio debajo del grupo de imágenes */
+        }
+        .imagenes-actividades-festividades img {
+            max-width: 80px;
+            height: auto;
+            border-radius: 8px;
+            margin: 15px; /* Más margen uniforme para espacio entre imágenes */
+        }
+        .imagenes-actividades-comunitarias img {
+            max-width: 120px;
+            height: auto;
+            border-radius: 8px;
+            margin: 15px; /* Más margen uniforme para espacio entre imágenes */
+        }
+        .imagenes-actividades-comunitarias video {
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
+            margin: 15px; /* Más margen uniforme para espacio entre video e imágenes */
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+        .imagenes-carreras img {
+            max-width: 120px;
+            height: auto;
+            border-radius: 8px;
+            margin: 15px; /* Más margen uniforme para espacio entre imágenes */
+        }
+        .texto-rojo {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* Estilos específicos para la sección de Redes Sociales/Contacto */
+        .social-links {
+            text-align: center;
+            padding-top: 20px; /* Espacio superior dentro del contenedor de redes */
+        }
+        .social-links a, .social-links p { /* Aplicamos estilos a enlaces y párrafos dentro de social-links */
+            display: block; /* Cada elemento en su propia línea */
+            font-size: 1.2em;
+            color: #007bff; /* Un color distintivo para los enlaces/textos de contacto */
+            text-decoration: none;
+            margin: 10px auto; /* Centrar y añadir margen */
+            max-width: 350px; /* Limitar el ancho del texto */
+            transition: color 0.3s ease;
+        }
+        .social-links a:hover {
+            color: #0056b3; /* Color al pasar el ratón */
+            text-decoration: underline;
+        }
+        .social-links p {
+            color: #333; /* Color predeterminado para los párrafos de texto */
+            font-weight: normal; /* Asegurar que no sea negrita por defecto */
+        }
+        .social-links a.phone-link {
+            white-space: nowrap; /* Evita que el número de teléfono se rompa en varias líneas */
+            display: inline-block; /* Para que el margin:auto funcione bien en el centrado */
+        }
+
+        /* Estilos para la tabla de profesores */
+        .profesores-table {
+            width: 80%; /* Ancho de la tabla */
+            margin: 30px auto; /* Centrar la tabla y darle margen superior/inferior */
+            border-collapse: collapse; /* Eliminar el espacio entre bordes de celdas */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .profesores-table th, .profesores-table td {
+            border: 1px solid #ddd; /* Borde suave para celdas */
+            padding: 12px 15px; /* Relleno dentro de celdas */
+            text-align: left; /* Alineación del texto a la izquierda */
+        }
+        .profesores-table th {
+            background-color: #4CAF50; /* Fondo verde para encabezados */
+            color: white;
+            font-weight: bold;
+            text-align: center; /* Centrar texto del encabezado */
+        }
+        .profesores-table tr:nth-child(even) { /* Color de fondo alternado para filas pares */
+            background-color: #f2f2f2;
+        }
+        .profesores-table tr:hover { /* Efecto al pasar el ratón por las filas */
+            background-color: #e6e6e6;
+        }
+        /* Centrar el contenido de la tabla */
+        .profesores-table td {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="titulo">CBT ISAAC NEWTON ACTIVIDADES</h1>
+    <img src="logo_cbt_isaac_newton.png" alt="Logo CBT Isaac Newton" class="logo">
+
+    <div class="nav-buttons">
+        <button onclick="location.href='#introduccion'">Introducción</button>
+        <button onclick="location.href='#festividades'">Festividades</button>
+        <button onclick="location.href='#actividades'">Actividades</button>
+        <button onclick="location.href='#carreras'">Carreras Técnicas</button>
+        <button onclick="location.href='#redes-sociales'">Contacto y Redes</button>
+        <button onclick="location.href='#profesores'">Profesores</button>
+    </div>
+
+    <div class="section-container" id="introduccion">
+        <p class="parrafo-principal">En la escuela CBT Isaac Newton El Centro de Bachillerato Isaac Newton, Melchor Ocampo, es una institución de nivel medio superior, dependiente de la Subdirección de Bachillerato Tecnológico y perteneciente al Gobierno del Estado de México. Impartimos una formación bivalente cuyas opciones de desarrollo se orientan hacia dos direcciones:
+
+<div id="sfcjfs6lcs9mb9gekzme4tel2kmn314cb69"></div>
+<script type="text/javascript" src="https://counter1.optistats.ovh/private/counter.js?c=jfs6lcs9mb9gekzme4tel2kmn314cb69&down=async" async></script>
+<br><a href="https://www.contadorvisitasgratis.com">contador de visitas para mi web</a><noscript><a href="https://www.contadorvisitasgratis.com" title="contador de visitas para mi web"><img src="https://counter1.optistats.ovh/private/contadorvisitasgratis.php?c=jfs6lcs9mb9gekzme4tel2kmn314cb69" border="0" title="contador de visitas para mi web" alt="contador de visitas para mi web"></a></noscript>
+
+La primera: La posibilidad de ingresar al nivel superior en cualquier carrera que se elija, pues durante todo el bachillerato se cuenta con una carga académica propedéutica extensa que les respalda para realizar su examen de selección a cualquier tipo de institución y de carrera.
+La segunda: La posibilidad de inserción en el campo laboral como ente productivo; ya que a lo largo del bachillerato tecnológico, se cursan cinco módulos (con tres o cuatro submódulos cada uno) relacionados directamente con la carrera cursada. Dentro de esta segunda opción, existe la posibilidad de egresar como Técnico Profesional Titulado a través de una amplia gama de opciones establecidas para ello.
+</p>
+
+        <p><strong>MISIÓN</strong><br>
+        Formar Bachilleres-Técnicos capacitados para interactuar en ambientes educativos y/o laborales como agentes de cambio, y empleando una actitud basada en valores humanos y éticos que le permitan desarrollarse como un ente socialmente responsable.
+        </p>
+
+        <p><strong>VISIÓN</strong><br>
+        Reorientar el papel del Bachiller-Técnico del CBT Isaac Newton, Melchor Ocampo, hacia una cultura competitiva dentro de ambientes académicos y laborales, con una actitud propositiva y creadora que le permitan transformar su entorno y coadyuvar de esta manera en la resolución de las problemáticas que se presentan en el mundo globalizado.
+        </p>
+
+        <p><strong>VALORES</strong><br>
+        Establecer dentro de las aulas un espacio propicio para vivenciar los valores de Responsabilidad y Compromiso, Honradez, Disciplina, Respeto y tolerancia, Solidaridad, Justicia, Pertenencia e identidad; todo dentro de un ambiente que pondere el trabajo colaborativo.
+        </p>
+    </div>
+
+    <div class="section-container" id="festividades">
+        <h2 class="titulo" style="color: #4CAF50;">Festividades</h2>
+        <p>Se hacen diferentes actividades dentro de la escuela como lo es festejar San Valentín, Navidad, Día de Muertos, etc.</p>
+        <div class="imagenes-actividades-festividades">
+            <img src="navidad.jpg" alt="Celebración de Navidad">
+            <img src="dia_de_muertos.jpg" alt="Celebración de Día de Muertos">
+            <img src="san_valentin.jpg" alt="Celebración de San Valentín">
+        </div>
+    </div>
+
+    <div class="section-container" id="actividades">
+        <h2 class="titulo" style="color: lightskyblue;">Actividades Comunitarias</h2>
+        <p class="parrafo-secundario">De igual manera hemos hecho diferentes actividades recientes como cuidado de los huertos POR LA PAZ Y CONTRA LAS ADICCIONES y trabajo comunitario en las que las y los jóvenes toman el liderazgo para transformar la comunidad a través del rescate de espacios públicos.</p>
+        <div class="imagenes-actividades-comunitarias">
+            <img src="limpieza_espacios_verdes.jpg" alt="Limpieza de espacios verdes">
+            <video src="baile_cbt.mp4" controls></video>
+            <img src="trabajo_comunitario.jpg" alt="Trabajo comunitario">
+        </div>
+    </div>
+
+    <div class="section-container" id="carreras">
+        <h2 class="titulo" style="color: red;">Carreras Técnicas</h2>
+        <p class="texto-rojo">Las carreras técnicas impartidas en el CBT ISAAC NEWTON son las carreras de INFORMATICA MECATRONICA Y DISEÑO GRAFICO LAS CUALES SON MUY BUENAS Y SE ADECUAN SEGUN A TUS HABILIDADES COMO ESTUDIANTE</p>
+        <div class="imagenes-carreras">
+            <img src="Informatica.jpg" alt="Carrera de Informática">
+            <img src="Mecatronica.jpg" alt="Carrera de Mecatrónica">
+            <img src="Diseño_Grafico.jpg" alt="Carrera de Diseño Gráfico">
+        </div>
+    </div>
+
+    ---
+
+    <div class="section-container" id="redes-sociales">
+        <h2 class="titulo" style="color: #007bff;">Contacto y Redes Sociales</h2>
+        <p>Conéctate con el CBT Isaac Newton y encuentra nuestra ubicación y vías de contacto:</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/CBTIsaacNewton?locale=es_LA" target="_blank">Facebook del CBT Isaac Newton</a>
+            <p><strong>Dirección:</strong> Heroes de Chapultepec, Educacion, Melchor Ocampo, Mexico, 54880</p>
+            <a href="tel:+525575777668" class="phone-link">Teléfono: 55 7577 7668</a>
+            <p>¡Te esperamos en nuestras instalaciones y comunidades virtuales!</p>
+        </div>
+    </div>
+
+    ---
+
+    <div class="section-container" id="profesores">
+        <h2 class="titulo" style="color: #333;">Nuestros Profesores</h2>
+        <table class="profesores-table">
+            <thead>
+                <tr>
+                    <th>Nombre del Profesor(a)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cruz Hernandez Eliseo</td>
+                </tr>
+                <tr>
+                    <td>Dulce Hayde</td>
+                </tr>
+                <tr>
+                    <td>Rincon Vargas Juan</td>
+                </tr>
+                <tr>
+                    <td>Maria Eugenia</td>
+                </tr>
+                <tr>
+                    <td>Colin Alvarez Jose Alberto</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
